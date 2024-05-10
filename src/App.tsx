@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
+import ListarCategorias from './components/Categoria/listarCategoria/ListarCategoria'
+import DeletarCategoria from './components/Categoria/deletarCategoria/DeletarCategoria'
+import FormularioCategoria from './components/Categoria/formularioCategoria/FormularioCategoria'
 
 function App() {
 
@@ -16,12 +16,13 @@ function App() {
         <Navbar />
         <div className='min-h-[80vh]'>
           <Routes>
-            <Route path="/" element={<Home />}  />
-            <Route path="/home" element={<Home />}  />
-            {/*<Route path="/cadastroCategoria" element = {<FormularioCategoria/>} />
-            * <Route path="/categorias" element={<ListaCategorias/>}  />
-              <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
-              <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />*/ }
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/categorias" element={<ListarCategorias />} />
+            <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} /> 
+            <Route path="/cadastroCategoria" element={<FormularioCategoria/>} />
+            <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
+          
           </Routes>
         </div>
 
